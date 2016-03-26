@@ -41,8 +41,6 @@ ajax.send = function (params) {
     else {
         url = params.url;
     }
-    // console.log(url);
-// console.log(params);
 
     var x = ajax.x();
     x.open(params.method, url, params.async);
