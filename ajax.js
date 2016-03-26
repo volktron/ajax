@@ -1,4 +1,6 @@
 var ajax = {
+    base_uri : "",
+
     x : function () {
         if (typeof XMLHttpRequest !== 'undefined') {
             return new XMLHttpRequest();
@@ -43,7 +45,7 @@ var ajax = {
         }
 
         var x = this.x();
-        x.open(params.method, url, params.async);
+        x.open(params.method, this.base_uri + url, params.async);
         x.onreadystatechange = function () {
             if (x.readyState == 4) {
                 if (x.status == 200) {
